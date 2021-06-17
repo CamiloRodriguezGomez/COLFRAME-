@@ -132,48 +132,40 @@ h2 {
 
 /* Contenedor General */
 
-#container {
+/* #container {
     max-width: 90%;
     margin: auto;
     margin-top: 30px;
-}
+} */
 
 
 /* CONTENIDO / SECCIONES */
+/* SECCIONES CLARAS */
 
 
-/* SECCIONES OSCURAS */
-
-.seccion img {
-    max-width: auto;
-    align-items: center;
-}
-
-.seccion {
-    background-color: #f8f9f9;
-    text-align: justify;
+.dark {
+    background-color: #e3e3e3;
+    text-align:justify;
     color: rgb(1, 5, 51);
-    padding-right: 80px;
-    padding-left: 80px;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    /* margin-top: 20px; */
-}
-
-.h2 {
+    padding: 15px 80px;
+    }
+.h2_dark {
     font-size: 40px;
     text-align: center;
+    margin: 30px auto;
 }
-
-.seccion p {
+.dark p {
     font-size: 20px;
 }
-
+.dark img{
+    width: 80%;
+    margin-left: 125px;
+}
 
 /* SECCIONES CLARAS */
 
 .seccionclear {
-    background-color: whitesmoke;
+    background-color: white;
     color: rgb(1, 5, 51);
     padding: 10px 50px 10px 50px;
     text-align: center;
@@ -234,10 +226,6 @@ h3 {
     height: 50%;
     margin: 0px auto 0px auto;
 }
-
-/* .contenedor1 h3 {
-    line-height: 50px;
-} */
 
 =====================================
 /* ++++++++++ CATEGORIES +++++++++++++++ */
@@ -311,8 +299,6 @@ h3 {
     cursor: pointer;
     visibility: hidden;
 }
-
-
 .card__overlay__text {
     top: 50%;
     left: 50%;
@@ -327,17 +313,6 @@ h3 {
     border-bottom: 2px solid white;
 }
 ======================================
-/* #img-derecha {
-    display: flex;
-    float: right;
-    max-height: 480px;
-    padding-right: 10px;
-    padding-left: 10px;
-} */
-
-#img-quienessomos {
-    align-self: center;
-}
 
 #texto-izquierda{
     font-size: 20px;
@@ -349,6 +324,3 @@ h3 {
     align-items: center;
     margin-top: 40px;
 }
-/* #img-derecha{
-    float: right;
-} */
