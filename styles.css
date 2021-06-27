@@ -28,6 +28,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .logo label{
   display: none;
@@ -60,7 +61,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  font-size: 25px;
+  font-size: 2.6vmin;
 
 }
 .banner-container{
@@ -447,6 +448,7 @@ article#main-col{
 
 #aliado{
     display:flex;
+    flex-wrap:wrap;
     margin: auto;
     align-items: center;
     justify-content: space-between;
@@ -500,7 +502,7 @@ footer{
   display: none;
 }
 /* MEDIA QUERIES */
-@media screen and (max-width: 320px){
+@media screen and (max-width: 480px){
 
   .logo label{
     display:block;
@@ -518,7 +520,9 @@ footer{
     font-size: 40px;
     padding: 20px;
   }
-
+  #menu{
+    display: none
+  }
   .opaco p, h2{
   font-size: 18px;
   margin-left: 25px;
@@ -587,7 +591,7 @@ text-align: center;
   margin: 0px;
 }
 #light img{
-  max-width: 250px;
+  width: 100%;
   margin: 0px;
 }
 #metodo{
@@ -605,6 +609,12 @@ text-align: center;
 }
 #contacto{
   display: block;
+  text-align: center;
+}
+
+#contacto img {
+  max-width: 55%;
+  margin: auto
 }
 #contacto p{
   font-size: 10px;
@@ -613,13 +623,13 @@ text-align: center;
   padding: 0px;
 }
 #lateral{
-  padding: 0px;
+  padding-bottom: 5px;
   margin: 0px;
 }
 #formulario{
   position: relative;
   padding: 5px;
-  margin: 10px 32px;
+  margin: 10px auto;
   max-width: 90%;
   }
 #formulario h2{
@@ -634,11 +644,22 @@ text-align: center;
   width: 90%;
   margin-top: 15px;
 }
+#aliados{
+  width: 90%;
+  margin: auto;
+}
+
 #aliado{
-  display: flex;
+  /* display: flex;
+  flex-wrap: wrap; */
   margin: auto;
   align-items: center;
+  justify-content: center;
   max-width: 80%;
+}
+#aliado img{
+  width: 90%;
+  margin: 4vmin 0;
 }
 .nav label{
   display: block;
@@ -662,7 +683,7 @@ text-align: center;
 }
 .logo label{
   margin-left: 40%;
-  margin-right: 15%;
+  margin-right: 4vmin;
   }
 #menu-btn: checked ~ .nav {
   transform: translateX(0%);
