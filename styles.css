@@ -2,11 +2,15 @@ html{
   scroll-behavior: smooth;
 }
 
+header label{
+  font-size: 40px;
+  cursor: pointer;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
-
 }
 
 .link {
@@ -25,7 +29,9 @@ body {
   display: flex;
   align-items: center;
 }
-
+.logo label{
+  display: none;
+}
 .nav {
   display: flex;
   width: 100%;
@@ -92,11 +98,11 @@ h2 {
   font-size: 20px;
 }
 
-.opaco h2 {
+/* .opaco h2 {
   margin: 5px;
   margin-left: 70px;
   font-size: 23px;
-}
+} */
 
 /* Redes Sociales en el Banner */
 
@@ -273,7 +279,7 @@ h3 {
 .card {
   position: relative;
   width: 100%;
-  margin: 0;
+  margin: 2px;
 }
 
 .card__overlay {
@@ -285,7 +291,7 @@ h3 {
   left: 0;
   right: 0;
   //background-color: var(--blue-jay-blue);
-  background-color: rgba(1, 5, 51, 0.7);
+  background-color: rgba(1, 5, 51, 0.3);
   overflow: hidden;
   transition: visibility 0.1s ease;
 }
@@ -482,7 +488,6 @@ footer{
   width: 45%;
   border: black 3px solid;
   border-radius: 10px;
-  /* display: flex; */
 }
 
 #imgx {
@@ -490,5 +495,191 @@ footer{
   width: 45%;
   border: black 3px solid;
   border-radius: 10px;
+}
+#menu-btn{
+  display: none;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 320px){
+
+  .logo label{
+    display:block;
+   }
+  #logo-img{
+    padding-left: 20px;
+    height: 75px;
+  }
+
+  #banner{
+    height:max-content;
+  }
+
+  #h1banner{
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  .opaco p, h2{
+  font-size: 18px;
+  margin-left: 25px;
+  margin-right: 10px;
+  text-align: left;
+}
+.opaco h2{
+  font-size: 22px;
+}
+
+.opaco p{
+  font-size: 16px;
+}
+
+.button  {
+  margin-left: 10px;
+}
+
+#redes{
+  font-size: 25px;
+  margin-left: 0px;
+}
+#redes ul{
+  margin-left: 0px;
+  display:inline;
+  padding-left: 20px;
+}
+
+#about-us.dark{
+  padding: 10px
+}
+.h2_dark{
+font-size: 25px;
+padding: 0px;
+margin: auto;
+text-align: center; 
+}
+.dark{
+  padding: 0px 20px;
+}
+.dark p{
+  font-size: 18px;
+  text-align: justify;
+  margin: 15px;
+  }
+.dark img{
+  width: 90%;
+  margin-left: 10px;
+}
+.sc_light {
+  background-color: white;
+  color: rgb(1, 5, 51);
+  padding: 10px 15px 10px 15px;
+  text-align: center;
+}
+.sc_light h3{
+  margin: 20px 0px;
+}
+.sc_light p{
+  margin-top: 0px;
+}
+
+#light{
+  display: block;
+  justify-content: center;
+  margin: 0px;
+}
+#light img{
+  max-width: 250px;
+  margin: 0px;
+}
+#metodo{
+  display:block;
+  align-items: center;
+}
+.card {
+  position:relative;
+  width: 100%;
+  margin: 2px;
+}
+.contacto h3{
+  font-size: 20px;
+  margin: 10px
+}
+#contacto{
+  display: block;
+}
+#contacto p{
+  font-size: 10px;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+}
+#lateral{
+  padding: 0px;
+  margin: 0px;
+}
+#formulario{
+  position: relative;
+  padding: 5px;
+  margin: 10px 32px;
+  max-width: 90%;
+  }
+#formulario h2{
+  font-size: 15px;
+}
+#formulario input, textarea {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+#formulario button {
+  width: 90%;
+  margin-top: 15px;
+}
+#aliado{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  max-width: 80%;
+}
+.nav label{
+  display: block;
+}
+.nav{
+  position: absolute;
+  top: 85px;
+  width: 70%;
+  transform: translatex(110%);
+  transition: all 0.3s;
+}
+.nav ul{
+  color: white;
+  flex-direction: column;
+  text-align: right;
+  background-color: rgb(255, 255, 255, 0.9);
+}
+#menu ul{
+  font-size: 18px;
+  color: white;
+}
+.logo label{
+  margin-left: 40%;
+  margin-right: 15%;
+  }
+#menu-btn: checked ~ .nav {
+  transform: translateX(0%);
+}
+
+footer{
+  padding: 10px;
+  margin-top: 20px;
+  color: #f4f4f4;
+  background-color: rgb(1, 5, 51);
+  text-align: center;
+  font-size: 10px;
+}
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1200px){
 
 }
