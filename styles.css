@@ -1,5 +1,6 @@
 html{
   scroll-behavior: smooth;
+  
 }
 
 header label{
@@ -13,9 +14,17 @@ body {
   margin: 0;
 }
 
+.panel-btn{
+  display: none;
+}
+
 .link {
   text-decoration: none;
   color: rgb(1, 5, 51);
+}
+
+.link-white{
+  color: white;
 }
 
 .header {
@@ -91,7 +100,7 @@ body {
   padding-left: 5vmin;
 }
 
-.opaco p,
+.opaco p, 
 h2 {
   margin: 5px;
   margin-left: 5vmin;
@@ -298,13 +307,12 @@ h3 {
   left: 0;
   right: 0;
   //background-color: var(--blue-jay-blue);
-  background-color: rgba(1, 5, 51, 0.3);
+  background-color: rgba(1, 5, 51, 0.6);
   overflow: hidden;
   transition: visibility 0.1s ease;
 }
 
 .secundario {
-
   box-sizing: border-box;
   padding: 1rem;
   text-align: center;
@@ -409,6 +417,7 @@ aside #lateral {
   font-size: 30px;
   margin-bottom: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  padding-top: 0%;
 }
 
 #formulario input, textarea {
@@ -420,8 +429,9 @@ aside #lateral {
   border: none;
 }
 
-#formulario button {
-  width: 70%;
+#formulario form .button {
+  width:70%;
+  margin: 15%;
 }
 
 .terminos {
@@ -507,6 +517,25 @@ footer{
 #menu-btn{
   display: none;
 }
+
+ /*  ********************************* Estilos Portafolio ************************* */
+ #contenedor{
+  box-sizing: border-box;
+  display: grid;
+  grid-template: auto / repeat(2, 1fr);
+  grid-auto-rows: auto;
+  justify-items: center;
+  gap: 10px;
+  padding: 0;
+  width: 90%;
+  margin: auto
+}
+
+#contenedor img, #contenedor video {
+  box-sizing: border-box;
+  width: 100%;
+  /* max-height: 250px; */
+}
 /************************** MEDIA QUERIES **************************************/
 @media screen and (max-width: 768px){
   .nav {
@@ -587,6 +616,56 @@ footer{
   }
 }
 @media screen and (max-width: 480px){
+  .panel{
+    position: fixed;
+    z-index: 4000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    background-color: rgb(1, 5, 51);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    transform: translate(100%, 0);
+  }
+
+  .panel.is-active {
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+  }
+  
+  
+  #inicio div .panel-btn {
+    position: fixed;
+    z-index: 5000;
+    bottom: 2vh;
+    right: 2vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(126, 126, 126);
+  }
+
+  .panel-btn.is-active{
+    background-color: white;
+  }
+  
+ #inicio > div > button > span > span::after{
+    color: white;
+  }
 
   .logo label{
     display:block;
@@ -604,9 +683,9 @@ footer{
     font-size: 40px;
     padding: 20px;
   }
-  #menu{
+  /* #menu{
     display: none
-  }
+  } */
   .opaco p, h2{
   font-size: 18px;
   margin-left: 25px;
@@ -713,19 +792,20 @@ text-align: center;
   margin: 10px
 }
 #contacto{
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
-
 #contacto img {
   max-width: 55%;
   margin: auto
 }
 #contacto p{
-  font-size: 10px;
+  font-size: 4vmin;
   text-align: center;
   margin: auto;
   padding: 0px;
+  width: 100%;
 }
 #lateral{
   padding-bottom: 5px;
@@ -738,8 +818,9 @@ text-align: center;
   max-width: 90%;
   }
 #formulario h2{
-  font-size: 15px;
+  font-size: 5vmin;
 }
+
 #formulario input, textarea {
   width: 100%;
   height: auto;
@@ -766,33 +847,50 @@ text-align: center;
   width: 90%;
   margin: 4vmin 0;
 }
-.nav label{
+/* .nav label{
   display: block;
-}
-.nav{
+} */
+/* .nav{
   position: absolute;
   top: 85px;
   width: 70%;
   transform: translatex(110%);
   transition: all 0.3s;
-}
-.nav ul{
+} */
+/* .nav ul{
   color: white;
   flex-direction: column;
   text-align: right;
   background-color: rgb(255, 255, 255, 0.9);
-}
-#menu ul{
+} */
+#menu{
+  position: fixed;
+    z-index: 4000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
   font-size: 18px;
-  color: white;
+padding: 0;
+}
+#menu li a{
+  font-size: 8vmin;
+  line-height: 250%;
+  color: white
 }
 .logo label{
   margin-left: 40%;
   margin-right: 4vmin;
   }
-#menu-btn: checked ~ .nav {
+/* #menu-btn: checked ~ .nav {
   transform: translateX(0%);
-}
+} */
 
 footer{
   padding: 10px;
@@ -802,6 +900,23 @@ footer{
   text-align: center;
   font-size: 10px;
 }
+  /*  ********************************* Estilos Portafolio ************************* */
+  #contenedor{
+    box-sizing: border-box;
+    display: grid;
+    grid-template: auto / 1fr;
+    grid-auto-rows: auto;
+    justify-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+  
+  #contenedor img, #contenedor video {
+    box-sizing: border-box;
+    width: 90%;
+    max-height: 250px;
+  }
+
 
 @media (min-width: 1200px){
 
